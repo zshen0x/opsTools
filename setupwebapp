@@ -1,0 +1,22 @@
+#! /usr/bin/env python
+
+# -*- coding: utf-8 -*-
+
+import sys
+import os
+
+#path to nginx
+NGINX_PATH_AV = '/etc/nginx/sites-avalible'
+NGINX_PATH_EN = '/etc/nginx/sites-enabled'
+# path to httpd
+APACHE_PATH_AV = '/etc/httpd/sites-avaliable'
+APACHE_PATH_EN = '/etc/httpd/sites-enabled'
+# path to tomcat
+TOMCAT_CONF_PATH = '/usr/local/tomcat1/conf/server.xml'
+# site path
+SITE_PATH = '/opt/www'
+
+
+def add_nginx__name, mode):
+    """add nginx virtual host"""
+    

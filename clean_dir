@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import sys
+import os
+
+def clean_dir(path):
+    """list all the files under the path"""
+#    print curdirs
+    if os.path.isdir(path):
+        os.chmod(path, 493)             # 755 for each dir
+        curdirs = os.listdir(path)
+        for curdir in curdirs:
+            curpath = os.path.join(path, curdir)
+            clean_dir(curpath)
+    else:
+        os.chmod(path, 420)             # 644 for each file
+
+
+if __name__ == '__main__':
+    try:
+        path = sys.argv[1]
+        if os.path.exists(path):
+            print 'cleaning . . .'
+            clean_dir(path)
+            print 'complete cleaning ' + path
+        else:
+            print path, "dosen't exits "
+    except Exception:
+        print 'please enter dir '
