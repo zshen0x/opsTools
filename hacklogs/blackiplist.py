@@ -104,10 +104,6 @@ def blackiplist_generator(log_path_list, blacklist_path):
 
 
 if __name__ == '__main__':
-    #ip_list = analyse_log(sys.argv[1]).items()
-    #print 'ip:                 ' + ' attack numbers: '
-    #for item in ip_list:
-    #    print '{0:-<20}'.format(item[0]), item[1]
     log_path_list = ['down.zjut.com_sec.log', 'www.zjut.com_sec.log']
     blacklist_path = 'blackip'
     blackiplist_generator(log_path_list, blacklist_path)
